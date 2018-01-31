@@ -1,4 +1,4 @@
-### IntelliJIDEALicenseServer
+### LicenseServer
 [lanyu大佬的搭建教程博客](http://blog.lanyus.com/archives/174.html)
 #### 使用帮助
 1. 复制JB文件夹到/data目录下
