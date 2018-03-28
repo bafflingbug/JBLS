@@ -15,7 +15,7 @@
 
         server {
             listen       80;
-            server_name  example.com;
+            server_name  example.com;
             
             location / {
                 proxy_redirect off;
