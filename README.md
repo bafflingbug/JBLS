@@ -8,25 +8,25 @@
 
 3. 添加
 
-        cd /data/JB
-        nohup ./IntelliJIDEALicenseServer_linux_amd64 -p 2703 -prolongationPeriod 999999999999 > log.out 2>&1 &
+        cd /home/JB
+        nohup ./IntelliJIDEALicenseServer_linux_amd64 -prolongationPeriod 999999999999 > log.out 2>&1 &
 
 4. 配置Nginx反向代理
 
         server {
             listen       80;
-            server_name  jb.bafflingbug.cn;
+            server_name  example.com;
             
             location / {
                 proxy_redirect off;
                 proxy_set_header Host $host;
                 proxy_set_header X-Real-IP $remote_addr;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_pass http://127.0.0.1:2703;
-                proxy_redirect http://127.0.0.1:2703 http://jb.bafflingbug.cn;
+                proxy_pass http://127.0.0.1:1027;
+                proxy_redirect http://127.0.0.1:1027 http://example.com;
             }
             location /static/  { 
-                root  /data/JB/;
+                root  /home/JB/;
                 expires      7d; 
             } 
         }
