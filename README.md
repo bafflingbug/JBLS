@@ -8,8 +8,8 @@
 
 3. 添加
 
-        cd /home/JB
-        nohup ./IntelliJIDEALicenseServer_linux_amd64 -prolongationPeriod 999999999999 > log.out 2>&1 &
+        cd /home/JB
+        nohup ./IntelliJIDEALicenseServer_linux_amd64 -prolongationPeriod 999999999999 > log.out 2>&1 &
 
 4. 配置Nginx反向代理
 
